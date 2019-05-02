@@ -8,9 +8,10 @@ build:
     - apt-get install libboost-all-dev libdb-dev libdb++-dev libminiupnpc-dev libzmq3-dev -y
     - ./autogen.sh
     - ./configure
-    - make -j7 test
-# [TODO] 
-#test:
-#  stage: test
-#  script:
-#    - ./runmytests.sh
+    - make -j7
+    
+
+test:
+  stage: test
+  script:
+    - - make -j7 test
