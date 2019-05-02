@@ -9,7 +9,7 @@ build:
     - ./autogen.sh
     - ./configure
     - make -j7 test
-# [TODO]
+# [TODO] 
 #test:
 #  stage: test
 #  script:
