@@ -3,8 +3,8 @@ image: debian:latest
 build:
   stage: build
   script:
-    - apt update && apt upgrade -y
-    - apt install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils -y
+    - apt-get update && apt upgrade -y
+    - apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils -y
     - apt-get install libboost-all-dev libdb-dev libdb++-dev libminiupnpc-dev libzmq3-dev -y
     - ./autogen.sh
     - ./configure
